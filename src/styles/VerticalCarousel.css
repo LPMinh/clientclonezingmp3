@@ -1,0 +1,65 @@
+/* VerticalCarousel.css */
+
+.vertical-carousel {
+
+
+  width:100%;
+  height: 330px;
+  display: grid;
+
+
+
+
+
+}
+
+.item-album {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+}
+
+.item-album:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.item-album img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.item-album span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: '#7B4A9E';
+}
+
+/* Tùy chọn: Điều chỉnh style cho các dấu chấm chỉ trỏ */
+.slick-dots {
+  bottom: 10px;
+}
+
+.vertical-carousel slick-slide {
+  width: auto !important;
+
+  /* Thay đổi giá trị width thành auto hoặc giá trị cụ thể */
+}
+
+
+.slick-dots li button::before {
+  font-size: 10px;
+  /* Điều chỉnh kích thước của dấu chấm */
+}

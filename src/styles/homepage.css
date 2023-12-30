@@ -1,0 +1,95 @@
+:root {
+    --font-color: #F2F2F2;
+    --active-background-color: #231B2E;
+}
+.homepage{
+    margin-top: 50px;
+    background-color: #170F23 ;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    
+}
+.title-category{
+    color: var(--font-color);
+}
+
+.menu-filter{
+    width: '100%';
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-filter button{
+    display: flex;
+    width:  100px;
+    height: 50%;
+    background-color: #231B2E;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #F2F2F2;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.song-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .song {
+    width: calc(33.33% - 10px); /* 33.33% chiều rộng để hiển thị tối đa 3 cột */
+    height: auto; /* Kích thước cố định cho mỗi cột */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+   
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%; /* Đặt chiều cao tuyệt đối cho hình ảnh */
+    object-fit: cover; /* Thay đổi kiểu xử lý hình ảnh (tùy chọn) */
+  }
+  
+  .info {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .song:hover {
+    background-color: #5e3f8d;
+  }
+  .song:hover .image{
+    opacity: 0.5;
+  
+    transition: opacity 0.3s ease;
+  }
+  .artist {
+    color: #f2f2f2;
+    font-size: 14px;
+  }
+
+  .name,
+  .artist,
+  .time {
+    display: flex;
+    margin-top: 5px;
+  }
+  .time{
+    color: #f2f2f288;
+  }

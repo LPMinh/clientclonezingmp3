@@ -1,0 +1,50 @@
+:root {
+    --font-color: #F2F2F2;
+    --active-background-color: #231B2E;
+}
+a {
+    text-decoration: none !important;
+    color: var(--font-color);
+}
+
+.menubar {
+    background-color: #231B2E !important;
+    display: flex !important;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh; /* Sử dụng 100vh để đảm bảo độ cao của menubar bằng với chiều cao của màn hình */
+    
+}
+
+.menubar ul {
+    list-style: none; /* Loại bỏ dấu chấm tròn mặc định của danh sách */
+    /* Loại bỏ padding mặc định của danh sách */
+    padding: 0;
+
+  
+    
+   
+  
+}
+
+.menubar ul li {
+    width: 100%;
+    height: 50px;
+    display: flex !important;
+    justify-content: "flex-start" !important;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+.menubar ul li:hover {
+    background-color: #170F23;
+}
+
+
+
+.menu-item {
+    color: var(--font-color);
+  
+}

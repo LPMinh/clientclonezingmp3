@@ -1,0 +1,8 @@
+.admin-layout{
+    display: flex;
+}
+.section{
+    flex: 1;
+    display: flex;
+    z-index: 1;
+}

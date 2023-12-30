@@ -1,0 +1,21 @@
+.formgroup {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formgroup label {
+    flex: 1;
+    display: inline-flex;
+    width: 50%;
+    height: 100%;
+}
+
+.formgroup input {
+    flex: 1;
+    display: inline-flex;
+    width: 50%;
+    height: 100%;
+}

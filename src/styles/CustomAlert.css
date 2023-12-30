@@ -1,0 +1,30 @@
+.custom-alert {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #231B2E;
+    padding: 20px;
+    border: 1px solid #8B45CA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+  
+  .alert-content {
+    text-align: center;
+    color: #F2F2F2;
+  }
+  
+  .close-btn {
+    cursor: pointer;
+    color: #8B45CA;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover {
+    color: red;
+  }
+  

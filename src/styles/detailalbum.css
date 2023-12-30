@@ -1,0 +1,92 @@
+.detailalbum{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.left-detail-album{
+    display: inline-flex;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: '50px';
+    
+  
+}
+.left-detail-album h3 p{
+    
+   color: #fff;
+  
+}
+.btn-play-album{
+    display: flex;
+    width:  120px;
+    height: 80%;
+    background-color: #8B45CA;
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #F2F2F2;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+    
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.info-detail-album{
+   display: flex;
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-detail-album{
+    display: inline-flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.table {
+  
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+.table thead tr th{
+   background-color: #170F23;
+    color: #fff;
+    
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+.table tbody tr td{
+    background-color: #170F23;
+    color: #000;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+}
+.table tbody tr:hover td {
+    background-color: #2F2739; 
+    cursor: pointer;
+  }
