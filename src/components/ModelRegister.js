@@ -59,19 +59,20 @@ function ModalRegister({show, handleClose}) {
                 <Modal.Title>Đăng Ký</Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
-                <div style={{display:'flex',width:'100%',height:'100%',flexDirection:'column'}}>
+                <Form style={{display:'flex',width:'100%',height:'100%',flexDirection:'column'}} onSubmit={handleSubmit}  encType="multipart/form-data">
                     <FormGroup style={{width:'100%',height:'50%',padding:20,display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
                         <label  style={{width:'50%',height:'100%'}}>Email</label>
-                        <input name="name" style={{width:'50%',height:'100%'}} type="text" placeholder="Nhập Email" onChange={(e)=>{setEmail(e.target.value)}}/>
+                        <input name="email" style={{width:'50%',height:'100%'}} type="text" placeholder="Nhập Email" onChange={(e)=>{setEmail(e.target.value)}}/>
                     </FormGroup>
                     <FormGroup style={{width:'100%',height:'50%',padding:20,display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
                         <label  style={{width:'50%',height:'100%'}}>Password</label>
-                        <input name="name" style={{width:'50%',height:'100%'}} type="text" placeholder="Nhập password" onChange={(e)=>{setPassword(e.target.value)}}/>
+                        <input name="password" style={{width:'50%',height:'100%'}} type="text" placeholder="Nhập password" onChange={(e)=>{setPassword(e.target.value)}}/>
                     </FormGroup>
                     <FormGroup style={{width:'100%',height:'50%',padding:20,display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
                         <label  style={{width:'50%',height:'100%'}}>Họ tên</label>
                         <input name="name" style={{width:'50%',height:'100%'}} type="text" placeholder="Họ tên" onChange={(e)=>{setName(e.target.value)}}/>
                     </FormGroup>
+                    <input type="hidden" name="role" value="USER" />
                     <FormGroup style={{width:'100%',height:'50%',padding:20,display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
                         <label style={{width:'50%',height:'100%'}}>Ảnh đại diện</label>
                         <input name="avatar" style={{width:'50%',height:'100%'}}  type="file"  accept=".jpg, .jpeg, .png, .gif, .webp" placeholder="Hình ảnh" onChange={handleChangeImage}/>
@@ -84,9 +85,9 @@ function ModalRegister({show, handleClose}) {
 
                  
                     
-                    <button className="btn"  type="button" style={{ marginTop: 20 ,backgroundColor:'#8B45CA',color:'white'}}  onClick={handleSubmit}>Đăng Ký</button>
+                    <button className="btn"  type="submit" style={{ marginTop: 20 ,backgroundColor:'#8B45CA',color:'white'}}  onClick={handleSubmit}>Đăng Ký</button>
 
-                </div>
+                </Form>
                 </Modal.Body>
                 <Modal.Footer>
                
