@@ -18,6 +18,7 @@ export const ApiFindSongPaging="https://musicmp3-6db318919a46.herokuapp.com/api/
 
 //user
 export const ApiLogin="https://musicmp3-6db318919a46.herokuapp.com/api/auth/authentication";
+export const ApiRegister="https://musicmp3-6db318919a46.herokuapp.com/api/auth/register";
 //playlist
 export const ApiAllPlaylist="https://musicmp3-6db318919a46.herokuapp.com/api/v1/playlists";
 export const ApiInsertPlaylist="https://musicmp3-6db318919a46.herokuapp.com/api/v1/playlists";

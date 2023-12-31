@@ -2,10 +2,18 @@ import Dropdown from "react-bootstrap/Dropdown";
 import LoginModal from "./ModalLogin";
 import { useEffect, useState } from "react";
 import { resetRole, useAppContext } from "../context/AppContext";
+import ModalRegister from "./ModelRegister";
 
 function AvtDropdown() {
     const user = JSON.parse(localStorage.getItem("user"));
     const userImageDefaul="https://www.hotelbooqi.com/wp-content/uploads/2021/12/128-1280406_view-user-icon-png-user-circle-icon-png.png"
+    const [showRegister,setShowRegister]=useState(false);
+    const handleShowRegister=()=>{
+        setShowRegister(true);
+    }
+    const handleCloseRegister=()=>{
+        setShowRegister(false);
+    }
 
     const [isAdmin,setIsAdmin]=useState(false);
     const handleAuth=()=>{
@@ -48,6 +56,7 @@ function AvtDropdown() {
   return (
     <div style={{position:'absolute', zIndex:1000}}>
     <LoginModal showed={showed} onHide={handleClose} role={"ALL"}/>
+    <ModalRegister handleClose={handleCloseRegister} show={showRegister}/>
     <Dropdown>
       <Dropdown.Toggle
         variant="success"
@@ -69,7 +78,7 @@ function AvtDropdown() {
       ) : (
         <Dropdown.Menu >
             <Dropdown.Item onClick={()=>{handleShow()}}>Đăng nhập</Dropdown.Item>
-            <Dropdown.Item href="/register">Đăng ký</Dropdown.Item>
+            <Dropdown.Item onClick={()=>{handleShowRegister()}}>Đăng ký</Dropdown.Item>
         </Dropdown.Menu>
       )}
      
