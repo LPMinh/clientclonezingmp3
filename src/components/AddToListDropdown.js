@@ -48,10 +48,9 @@ function AddToListDropdown({songId}) {
         })
         handleShowAlert();
     }
-    useEffect(
-            ()=>{
+  
              getPlaylistByUser();
-            },[]   );
+           
   return (
     <div style={{alignSelf:'center',backgroundColor:"#34224F"}}>
     {showAlert && <CustomAlert message="Thêm Thành Công" onClose={handleCloseAlert} />}
