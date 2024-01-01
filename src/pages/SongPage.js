@@ -9,7 +9,7 @@ import { setListSong, useAppContext } from "../context/AppContext";
 
 function SongPage() {
     const [songPage,setSongPage]=useState([]);
-    const [pageCount,setPageCount]=useState(5);
+    const [pageCount,setPageCount]=useState();
     const [song,setSong]=useState([]);
     const [currentPage,setCurrentPage]=useState(1);
     const { state, dispatch } = useAppContext();
@@ -23,8 +23,10 @@ function SongPage() {
                     ((data) => {
                        
                         console.log(data);
-                        dispatch(setListSong(data.songPage.content));
                         setPageCount(data.songPage.totalPages);
+                        console.log(data.songPage.totalPages);
+                        dispatch(setListSong(data.songPage.content));
+                      
                        
                     }
                     ).catch((error) => {
