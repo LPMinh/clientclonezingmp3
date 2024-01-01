@@ -17,6 +17,10 @@ function MenuBar() {
   const [showModalLogin, setShowModalLogin] = useState(false);
   const [listPlaylist, setListPlaylist] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
+  const [reload, setReload] = useState(false);
+  const handleReload = () => {
+    setReload(!reload);
+  };
   const handleCreatePlaylist = () => {
     if (localStorage.getItem("user")) {
       setShowModalCreatePlaylist(true);
@@ -45,6 +49,7 @@ function MenuBar() {
       <ModalCreatePlaylist
         showed={showModalCreatePlaylist}
         onHide={() => setShowModalCreatePlaylist(false)}
+        onReload={handleReload}
       />
       <LoginModal
         showed={showModalLogin}

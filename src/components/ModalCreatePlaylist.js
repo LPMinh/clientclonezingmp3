@@ -3,7 +3,7 @@ import { Button, Modal, Form } from "react-bootstrap";
 import { ApiInsertPlaylist } from "../api/indext";
 import ModalAddSongToList from "./ModalAddSongToList";
 
-function ModalCreatePlaylist({ showed, onHide, showModalAddSong }) {
+function ModalCreatePlaylist({ showed, onHide, showModalAddSong,onReload }) {
   const [playlistName, setPlaylistName] = useState("");
   const [showModalAddSongToList, setShowModalAddSongToList] = useState(false);
   const [playlist, setPlaylist] = useState();
@@ -40,6 +40,7 @@ function ModalCreatePlaylist({ showed, onHide, showModalAddSong }) {
           handleShowModalAddSongToList(data);
         }
         onHide();
+        onReload();
       });
   };
 
