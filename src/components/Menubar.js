@@ -87,20 +87,22 @@ function MenuBar() {
             &nbsp; Thêm Playlist{" "}
           </div>
         </li>
-        {user &&
-          listPlaylist.map((item) => {
-            return (
-              <li
-                style={{
-                  backgroundColor: selected === 3 ? "#3A3344" : "#231B2E",
-                }}
-              >
-                <a className="menu-item" href={`/playlist/${item.id}`}>
-                  {item.name}
-                </a>
-              </li>
-            );
-          })}
+        <div style={{overflow:'auto'}}>
+          {user &&
+            listPlaylist.map((item) => {
+              return (
+                <li
+                  style={{
+                    backgroundColor: selected === 3 ? "#3A3344" : "#231B2E",
+                  }}
+                >
+                  <a className="menu-item" href={`/playlist/${item.id}`}>
+                    {item.name}
+                  </a>
+                </li>
+              );
+            })}
+        </div>
       </ul>
     </div>
   );
