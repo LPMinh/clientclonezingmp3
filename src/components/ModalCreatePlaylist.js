@@ -39,8 +39,9 @@ function ModalCreatePlaylist({ showed, onHide, showModalAddSong,onReload }) {
         if (showModalAddSong) {
           handleShowModalAddSongToList(data);
         }
-        onHide();
+        // onHide();
         onReload();
+        onHide();
       });
   };
 
