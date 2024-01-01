@@ -13,7 +13,7 @@ function SliderNewAllBUm() {
         slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
-        speed: 500,
+        speed: 200,
         autoplay: true,
         
       };
