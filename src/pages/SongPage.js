@@ -9,7 +9,7 @@ import { setListSong, useAppContext } from "../context/AppContext";
 
 function SongPage() {
     const [songPage,setSongPage]=useState([]);
-    const [pageCount,setPageCount]=useState(1);
+    const [pageCount,setPageCount]=useState(5);
     const [song,setSong]=useState([]);
     const [currentPage,setCurrentPage]=useState(1);
     const { state, dispatch } = useAppContext();
