@@ -29,6 +29,8 @@ export const ApiFindPlaylistByID="https://musicmp3-6db318919a46.herokuapp.com/ap
 export const ApiAllCategory="https://musicmp3-6db318919a46.herokuapp.com/api/v1/categories";
 export const ApiInsertCategory="https://musicmp3-6db318919a46.herokuapp.com/api/v1/categories";
 export const ApiAddPlaylistToCategory="https://musicmp3-6db318919a46.herokuapp.com/api/v1/categories/add-playlist";
+//search
+export const ApiSearch="https://musicmp3-6db318919a46.herokuapp.com/api/v1/search/";
 
 
 

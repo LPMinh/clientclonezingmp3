@@ -26,7 +26,7 @@ function ModalSelectArtist({onHide, showed}) {
     useEffect(() => {
         const fetchArtist = async () => {
             try {
-                const response = await fetch(ApiAllArist);
+                const response = await fetch(ApiAllArist,);
                 const data = await response.json();
                 console.log(data);
                 setArtist(data);

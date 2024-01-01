@@ -14,6 +14,7 @@ import { Nav } from "react-bootstrap";
 import NotFoundPage from "./NotFoundPage";
 import { jwtDecode } from "jwt-decode";
 import SongPage from "../pages/SongPage";
+import PageSearch from "../pages/PageSearch";
 
 function RouteAu() {
    const [isAdmin,setIsAdmin]=useState(false);
@@ -52,6 +53,7 @@ function RouteAu() {
         <Route path='/album/:id' element={<DefaultLayout><DetailAlbum/></DefaultLayout>}  ></Route>
         <Route path='/playlist/:id' element={<DefaultLayout><DetailPlayList/></DefaultLayout>}></Route>
         <Route path='/song' element={<DefaultLayout><SongPage/></DefaultLayout>}></Route>
+        <Route path="/search/:query" element={<DefaultLayout><PageSearch/></DefaultLayout>}></Route>
         {isAdmin && <Route path='/admin' element={<AdminLayout><AdminPage/></AdminLayout>} ></Route>
         }
         
