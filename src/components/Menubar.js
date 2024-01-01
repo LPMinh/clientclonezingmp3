@@ -10,6 +10,7 @@ import ModalCreatePlaylist from "./ModalCreatePlaylist";
 import LoginModal from "./ModalLogin";
 import { ApiFindPlaylistByUser } from "../api/indext";
 import { Link } from "react-router-dom";
+import { setListPlaylistOfUser, useAppContext } from "../context/AppContext";
 
 function MenuBar() {
   const [selected, setSelected] = useState(null);
@@ -18,6 +19,7 @@ function MenuBar() {
   const [listPlaylist, setListPlaylist] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
   const [reload, setReload] = useState(false);
+  const {state,dispatch}=useAppContext();
   const handleReload = () => {
     setReload(!reload);
   };
@@ -38,10 +40,13 @@ function MenuBar() {
       .then((data) => {
         console.log(data);
         setListPlaylist(data);
+        dispatch(setListPlaylistOfUser(data));
       });
   };
   useEffect(() => {
     getPlaylistByUser();
+    
+    
   }, []);
 
   return (

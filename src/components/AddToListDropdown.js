@@ -6,31 +6,33 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { DropdownButton, SplitButton } from "react-bootstrap";
 import { APIAddSongToPlaylist, ApiFindPlaylistByUser } from "../api/indext";
 import CustomAlert from "./CustomAlert";
+import { useAppContext } from "../context/AppContext";
 
 function AddToListDropdown({songId}) {
-    const [listPlaylist,setListPlaylist]=useState([]);
+   const {state,dispatch}=useAppContext();
+    const [listPlaylist,setListPlaylist]=useState(state.listPlaylistOfUser);
     const [showAlert, setShowAlert] = useState(false);
-
+  console.log(listPlaylist);
   const handleShowAlert = () => {
     setShowAlert(true);
   };
-
+  const id = JSON.parse(localStorage.getItem("user"))?.data?.id;
   const handleCloseAlert = () => {
     setShowAlert(false);
   };
    
-    const getPlaylistByUser=()=>{
-        if(!localStorage.getItem("user")){
-            return;
-        }
-        const id = JSON.parse(localStorage.getItem("user")).data.id;
-        fetch(ApiFindPlaylistByUser+id)
-        .then((response)=>response.json())
-        .then((data)=>{
-            console.log(data);
-            setListPlaylist(data);
-        })
-    }
+    // const getPlaylistByUser=()=>{
+    //     if(!localStorage.getItem("user")){
+    //         return;
+    //     }
+    //     const id = JSON.parse(localStorage.getItem("user")).data.id;
+    //     fetch(ApiFindPlaylistByUser+id)
+    //     .then((response)=>response.json())
+    //     .then((data)=>{
+    //         console.log(data);
+    //         setListPlaylist(data);
+    //     })
+    // }
     const handleAddSongToList=(playlistId)=>{
         const payload={
             idSong:songId,
@@ -48,9 +50,7 @@ function AddToListDropdown({songId}) {
         })
         handleShowAlert();
     }
-  
-             getPlaylistByUser();
-           
+    
   return (
     <div style={{alignSelf:'center',backgroundColor:"#34224F"}}>
     {showAlert && <CustomAlert message="Thêm Thành Công" onClose={handleCloseAlert} />}

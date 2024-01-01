@@ -8,6 +8,7 @@ const initialState={
     setsSongModify:[],
     listPlaylistSelected:[],
     songAddToListSelected:[],
+    listPlaylistOfUser:[],
     role:"",
 
 };
@@ -85,6 +86,10 @@ export const setRole=(role)=>({
 export const resetRole=()=>({
     type:"RESET_ROLE",
 });
+export const setListPlaylistOfUser=(listPlaylist)=>({
+    type:"SET_LIST_PLAYLIST_OF_USER",
+    payload:listPlaylist,
+});
 
 
 const appReducer=(state,action)=>{
@@ -157,6 +162,8 @@ const appReducer=(state,action)=>{
             return {...state,role:action.payload};
         case "RESET_ROLE":
             return {...state,role:""};
+        case "SET_LIST_PLAYLIST_OF_USER":
+            return {...state,listPlaylistOfUser:action.payload};    
 
             
         default:
