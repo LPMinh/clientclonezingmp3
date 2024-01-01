@@ -46,13 +46,15 @@
     border-radius: 20px;
 }
 .song-container {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: row;
   }
   
   .song {
     width: calc(33.33% - 10px); /* 33.33% chiều rộng để hiển thị tối đa 3 cột */
+    width: 30%;
     height: auto; /* Kích thước cố định cho mỗi cột */
     margin-bottom: 20px;
     display: flex;

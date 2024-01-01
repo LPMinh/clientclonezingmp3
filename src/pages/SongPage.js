@@ -49,11 +49,11 @@ function SongPage() {
           };
     
     return ( 
-        <div style={{display:'flex',width:'100%',height:'100vh',flexDirection:'column' ,position:'relative' }}>
+        <div style={{display:'flex', width:'100%' ,height:'100vh',flexDirection:'column' ,position:'relative' ,padding:100}}>
             
                 
                 
-            <table className="table table-dark  table-hover table-responsive" style={{ marginTop: 60,display:'flex',height:'350px' ,overflow:'auto'}}>
+            <table className="table  table-dark  table-hover table-responsive" style={{ display:'flex',marginTop: 60,width:'100%',display:'flex',height:'350px' ,overflow:'auto',padding:100}}>
             <thead >
                 <tr>
                     <th>ID</th>
@@ -70,7 +70,7 @@ function SongPage() {
             
                          listsong.map((item,index) => {
                         return (
-                            <tr key={item.id} onClick={()=>handleChangeSong(index)}>
+                            <tr   key={item.id} onClick={()=>handleChangeSong(index)}>
                                 <td>{item.id}</td>
                                 <td>{item.name}</td>
             

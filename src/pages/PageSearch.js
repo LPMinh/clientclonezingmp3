@@ -5,13 +5,14 @@ import { ApiSearch } from '../api/indext';
 import AddToListDropdown from '../components/AddToListDropdown';
 function PageSearch() {
     const {query}=useParams();
-    const [data,setData]=useState();
+    const [data,setData]=useState({});
     useEffect(() => {
-        let fetchSearch = () => {
+        const fetchSearch =  () => {
             fetch(ApiSearch + query)
                 .then((response) => { return response.json() })
                 .then((data) => { setData(data);console.log(data) });
         }
+        
         fetchSearch();
     }
     , [query])
@@ -30,7 +31,7 @@ function PageSearch() {
             </div>
             <div className="list-song">
                 <h1>Bài hát</h1>
-                {data.songs?.length===0 && <h3>Không có bài hát nào</h3>}
+                {data.song !== undefined && data.songs?.length===0 && <h3>Không có bài hát nào</h3>}
                 <div className="song-container">
                     {data?.songs?.map((item,index)=>{
                         return(
@@ -75,18 +76,18 @@ function PageSearch() {
                 }
                 <div className="list-artist">
                 <h1>Nghệ sĩ</h1>
+                {data.artists?.length===0 && <h3>Không có nghệ sĩ nào</h3>}
                 <div className="artist-container">
                     { data?.artists?.map((item,index)=>{
                         return(
-                            <div className="artist">
-                                <img src={item?.img} alt="" style={{width:'100px',height:'100px',objectFit:'contain'}}></img>
-                                <div className="artist-info">
-                                    <h3>{item?.fullName}</h3>
+                            <div style={{width:'100%',flexDirection:'column'}}>
+                                <img src={item?.img} alt="" style={{width:'100px',height:'100px',objectFit:'contain' ,borderRadius:'50%'}}></img>
+                                
+                                <div style={{width:'100%'}} className="artist-info">
+                                    <h4>{item?.fullName}</h4>
                                     
                                 </div>
-                                <div className="artist-icon">
-                                    <AddToListDropdown song={item}/>
-                                </div>
+                               
                             </div>
                         )
                     }

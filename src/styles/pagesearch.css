@@ -22,7 +22,7 @@
   }
   
   .song {
-    width: calc(100% - 10px); /* 33.33% chiều rộng để hiển thị tối đa 3 cột */
+    width: calc(33% - 10px); /* 33.33% chiều rộng để hiển thị tối đa 3 cột */
     height: auto; /* Kích thước cố định cho mỗi cột */
     margin-bottom: 20px;
     display: flex;
