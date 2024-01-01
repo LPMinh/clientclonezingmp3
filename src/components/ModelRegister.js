@@ -39,13 +39,16 @@ function ModalRegister({show, handleClose}) {
                 },
                 method: 'POST',
                 body: formData,
-            }).then((response) => response.text());
-            if(response.ok){
-                handleClose();
-  
-            }else{
-                setError(response);
-            }
+            }).then((response) => response.json()).then((data) => {
+                if(data?.token){
+                   
+                   handleClose();
+                }else{
+                    setError("Đăng ký thất bại");
+                }
+            })
+
+           
         }
         catch (error) {
             console.error('Error:', error);

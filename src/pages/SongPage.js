@@ -24,6 +24,7 @@ function SongPage() {
                        
                         console.log(data);
                         dispatch(setListSong(data.songPage.content));
+                        setPageCount(data.songPage.totalPages);
                        
                     }
                     ).catch((error) => {
