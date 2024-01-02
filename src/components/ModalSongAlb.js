@@ -167,7 +167,7 @@ function ModelSongAlbum({
           <h6>{nameAlbum}</h6>
         </div>
       </Modal.Header>
-      <Modal.Body style={{ width: "90vw", height: "90vh" }}>
+      <Modal.Body>
         <div className="container-fluid">
           <div className="row">
             {/* Form */}
