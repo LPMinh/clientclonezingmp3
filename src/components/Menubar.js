@@ -39,6 +39,9 @@ function MenuBar() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+       
+        data.reverse();
+
         setListPlaylist(data);
         dispatch(setListPlaylistOfUser(data));
       });
