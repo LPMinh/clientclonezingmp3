@@ -157,6 +157,7 @@ function ModelSongAlbum({
       console.error(error);
     }
     dispatch(resetSongSave());
+    onHide();
   };
   return (
     <Modal show={showed} onHide={onHide} size="xl">

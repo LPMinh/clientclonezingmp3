@@ -122,7 +122,7 @@ function DetailArtist() {
     };
     fetchArtist();
     fetchAlbum();
-  }, [re]);
+  }, [re,showModalSongAlbum]);
   return (
     <div className="detailartist">
       <ModalDetailAlbum  show={showModalDetailAlbum} idalbum={idAlbumSelected} handleClose={handleHideModalDetailAlbum}/>

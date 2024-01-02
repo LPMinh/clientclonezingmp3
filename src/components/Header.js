@@ -11,10 +11,16 @@ function Header() {
         console.log(e.target.value);
         setSearch(e.target.value);
       };
+      const handleGoBack=()=>{
+        navigate(-1);
+        }
+        const handleGoForward=()=>{
+            navigate(1);
+        }
     return (<div className="header">
             <div style={{ display:'flex',width:'70%',height:'100%',justifyContent:'space-between',alignItems:'center'}}>
                 <div style={{flexDirection:'row',width:'20%',height:'100%',justifyContent:'space-between',alignItems:'center'}}>
-                    <button className='button'>
+                    <button className='button' onClick={()=>{handleGoBack()}}>
                         <FontAwesomeIcon icon={faArrowLeft} size="xl" style={{color: "#ffffff",}} />  
                         </button>
                     <button className='button'>
